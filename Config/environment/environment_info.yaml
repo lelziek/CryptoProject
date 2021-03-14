@@ -1,0 +1,10 @@
+environment_info:
+  Test:
+    api_domain: "uat-api.3ona.co"
+    ws_user_endpoint: "wss://uat-stream.3ona.co/v2/user"
+    ws_market_endpoint: "wss://uat-stream.3ona.co/v2/market"
+
+  Production:
+    api_domain: "api.crypto.com"
+    ws_user_endpoint: "wss://stream.crypto.com/v2/user"
+    ws_market_endpoint: "wss://stream.crypto.com/v2/market"

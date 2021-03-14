@@ -1,0 +1,54 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "simple": {
+            "format": "%(asctime)s_%(msecs)d %(thread)d: %(name)s: %(filename)s: %(lineno)s: %(levelname)s: %(message)s"
+        }
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "level": "ERROR",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        },
+        "file_handler": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "DEBUG",
+            "formatter": "simple",
+            "filename": "master.log",
+            "maxBytes": 10485760,
+            "backupCount": 20,
+            "encoding": "utf8"
+        },
+        "longterm": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "DEBUG",
+            "formatter": "simple",
+            "filename": "test_history.log",
+            "maxBytes": 10485760,
+            "backupCount": 20,
+            "encoding": "utf8"
+        },
+        "single_run": {
+            "class": "logging.FileHandler",
+            "level": "DEBUG",
+            "formatter": "simple",
+            "filename": "test.log",
+            "mode": "w",
+            "encoding": "utf8"
+        }
+    },
+    "loggers":{
+    "framework": {
+        "level": "DEBUG",
+        "handlers": ["console", "file_handler"]
+    },
+    "test": {
+        "level": "DEBUG",
+        "handlers": ["console", "longterm", "single_run"]
+    }
+},
+    "disable_module_logs": ["urllib3", "websocket"]
+}

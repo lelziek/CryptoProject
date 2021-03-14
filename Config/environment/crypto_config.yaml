@@ -1,0 +1,4 @@
+
+crypto_config:
+    automation_main:
+        Environment: Production    #Test, Production

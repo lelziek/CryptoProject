@@ -1,0 +1,11 @@
+websocket_api_data:
+  book_instrument_name:
+    normal_case:
+      - param_id: 11
+        channels: ["book.ETH_CRO.150"]
+        method: "subscribe"
+        nonce: 1587523073344
+      - param_id: 11
+        channels: ["book.ETH_CRO.10"]
+        method: "subscribe"
+        nonce: 1587523073344
