@@ -38,13 +38,12 @@ Test/CommonAPI/test_get_candlestick.py
 2. *websocket api "book.{instrument_name}.{depth}"*:
 Test/WebsocketAPI/test_websocket_api.py
 
-# How to used:
+How to used:
 ----------------------------------
-1. Install python library by command:
-      pip install -r requirement
+1.Install python library by command:
+ - pip install -r requirement
 
-2. Execute:
-e.g.
-(venv) E:\Code\CryptoProject>pytest Tests\CommonAPI\test_get_candlestick.py
+2.Execute:
+ - e.g. (venv) E:\Code\CryptoProject>pytest Tests\CommonAPI\test_get_candlestick.py
 
 
